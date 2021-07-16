@@ -1,0 +1,36 @@
+spring:
+  oauth1a:
+    twitter:
+      resource_url: https://api.twitter.com/1.1/account/verify_credentials.json
+      public_key: 12345
+      secret_key: 12345
+  oauth2:
+    odnoklassniki:
+      resource_url: https://api.ok.ru/api/users/getCurrentUser?application_key=CINLIMJGDIHBABABA&format=JSON
+      client_id: 512000494295
+      public_key: CINLIMJGDIHBABABA
+      secret_key: 2DD0271520909F838004E332
+  security:
+    oauth2:
+      client:
+        registration:
+          facebook:
+            client-id: 12345
+            client-secret: 12345
+
+  auth:
+    jwt:
+      secure_key: 45jwt3GH
+      validityInMilliseconds: 86400000
+
+    vk:
+      client_id: 7575777
+      secure_key: PRLPSCHx4XO7881zgg3b
+      scope: email,offline
+      redirect_uri: http://localhost:9999/auth-vk
+      display: popup
+      response_type: code
+      version: 5.122
+      authorize_host: http://oauth.vk.com/authorize
+      token_host: https://oauth.vk.com/access_token
+      user-info-url-host: https://api.vk.com/method/users.get?fields=email

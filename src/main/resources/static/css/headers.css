@@ -1,0 +1,172 @@
+html {
+    font-size: 14px;
+    min-height: 1200px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+.container {
+    max-width: 1440px;
+}
+
+.border-top {
+    border-top: 1rem solid #e5e5e5;
+}
+
+.border-bottom {
+    border-bottom: 1rem solid #e5e5e5;
+}
+
+.box-shadow {
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+.siteHeader {
+    background: #ebc493;
+}
+
+.loginbutton {
+    margin-left: 1rem;
+}
+
+.secondarybtn {
+    margin-left: 20rem;
+}
+
+.formSearch {
+    margin-right: 28.9rem;
+}
+
+.dropdownbtn {
+    min-width: 218px;
+    font-size: 1rem;
+    background: #ebc493;
+}
+
+.promo {
+    margin-left: 2.4rem;
+}
+
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+/* Carousel base class */
+.carouselWithStock {
+    margin-top: .3rem;
+    margin-bottom: 1rem;
+    width: 400px;
+}
+/* Declare heights because of positioning of img element */
+.carousel-itemWithStock {
+    height: 250px;
+    background-color: #ebc493;
+}
+
+/* Declare margin-bottom because of positioning of element on carousel slide */
+.carousel-indicators {
+    margin-bottom: -1px;
+}
+
+/* Declare margins for carousel button because of positioning of element on carousel slide */
+.btn-carousel {
+    margin-bottom: 5px;
+    margin-left: -252px;
+}
+
+.stockTitle {
+    margin-left: -.8rem;
+    margin-right: -1rem;
+    padding-bottom: 1rem;
+    background-color: #ebc493;
+    width: 400px;
+    height: 100px;
+}
+
+.container-carousel {
+    height: 500px;
+}
+
+.next-slide {
+    width: 400px;
+    height: 200px;
+}
+/* MARKETING CONTENT
+-------------------------------------------------- */
+.featurette-divider {
+    margin: 5rem 0; /* Space out the Bootstrap <hr> more */
+}
+/* Thin out the marketing headings */
+.featurette-heading {
+    font-weight: 100;
+    line-height: 1;
+    letter-spacing: -.05rem;
+}
+/*-------------------------------------------------- */
+
+.products {
+    padding-bottom: 1rem;
+}
+
+.productView {
+    margin-left: -.6rem;
+    margin-right: -.6rem;
+}
+
+.productName {
+    margin-left: -.8rem;
+    margin-right: -1rem;
+    padding-bottom: 1rem;
+}
+
+.productImg {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.producthref {
+    background: #ebc493;
+}
+
+/* TAB in productPage
+-------------------------------------------------- */
+.nav-masthead .nav-link {
+    padding: .25rem 0;
+    font-weight: 700;
+    color: rgba(43, 43, 43, 0.5);
+    background-color: transparent;
+    border-bottom: .25rem solid transparent;
+}
+
+.nav-masthead .nav-link:hover {
+    border-bottom-color: rgba(43, 43, 43, 0.25);
+}
+
+.nav-masthead .nav-link:focus {
+    border-bottom-color: rgb(43, 43, 43);
+}
+
+.nav-masthead .active {
+    color: #2b2b2b;
+    border-bottom-color: #2b2b2b;
+}
+svg.heartSvg {
+    display: block;
+    width: 50px;
+    height: auto;
+}
+
+.heartSvg {
+    fill:transparent;
+    stroke: #ff0000;
+    stroke-width:6px;
+    cursor:pointer;
+    transition:fill .3s;
+}
+
+path.filled {
+    fill:#f00;
+}
+

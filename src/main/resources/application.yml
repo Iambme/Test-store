@@ -1,0 +1,88 @@
+spring:
+  session:
+    jdbc:
+      initialize-schema: always
+      table-name: SPRING_SESSION
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/online_store
+    username: root
+    password: root
+    #    url: jdbc:postgresql://ec2-52-208-138-246.eu-west-1.compute.amazonaws.com:5432/datmbr0etpmdhb
+    #    username: ivrmvajsnlixth
+    #    password: ec3c54e3047872e2eb2075ec1e333e04aedb0ab4604410209771d31fe5042050
+
+    hikari:
+      leak-detection-threshold: 60000
+      maximum-pool-size: 5
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        storage_engine: innodb
+        jdbc:
+          timezone: UTC
+  output:
+    ansi:
+      enabled: ALWAYS
+  servlet:
+    multipart:
+      max-file-size: 5MB
+      max-request-size: 5MB
+  mail:
+    host: smtp.yandex.ru
+    username: jm-online-store@yandex.ru
+    password: jm2020JM2020
+    port: 465
+    protocol: smtps
+    debug: true
+    host-imap: imap.yandex.ru
+    store:
+      protocol: imaps
+  server:
+    url: http://localhost:9898
+  mvc:
+    static-path-pattern: /static/**
+server:
+  port: 9898
+logging:
+  file:
+    name: logs/my.log
+    max-history: 1
+  level:
+    com:
+      jm: debug
+  pattern:
+    console: '%d{yyyy-MM-dd HH:mm:ss} [%thread] %highlight(%-5level) %logger{36} - %msg%n'
+    file: '%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n'
+emailStockSending:
+  delay: '0 0 10 */1 * *'
+
+price-list-service:
+  path-to-xls-file: uploads/files/prices/pricedaily.xls
+  path-to-zip-file: uploads/files/prices/pricedaily.zip
+
+delete_expired_customer_period:
+  cron: '0 1 1 * * *'
+
+check_new_emails_subscribe_confirmations:
+  cron: '30 * * * * *'
+
+spring.profiles.include: 'security'
+
+#https://jm-online-store.herokuapp.com
+# Смотри инструкцию https://trello.com/c/8akD9MhL
+production-url:
+  https://jm-online-store.herokuapp.com
+telegram-bot:
+  name: JM_store_bot
+  token: 1432791063:AAH1j664T9RnRPhS7elFAfvFcA5enPunWeE
+  webhook-path: https://jm-online-store.herokuapp.com/telegram-bot
+
+common-data:
+  store-name: Online store
+
